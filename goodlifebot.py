@@ -26,15 +26,12 @@ browser.find_element_by_class_name('c-btn-cta').click()
 
 
 # Waiting for time
-'''
 now = datetime.datetime.now()
 alarm_time = datetime.datetime.combine(now.date(), datetime.time(hour, minute, 0))
 time.sleep((alarm_time - now).total_seconds())
-'''
 
 # Refreshes and clicks to the desired day
-#browser.refresh()
-time.sleep(20)
+browser.refresh()
 next_butt = browser.find_elements_by_class_name('c-icon__wrapper')[2]
 for i in range(day-1):
     next_butt.click()
